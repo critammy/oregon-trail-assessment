@@ -8,7 +8,7 @@ class Traveler {
         this.food += 2
     }
     eat() {
-        if (this.food = 0) {
+        if (this.food < 0) {
             this.isHealthy = false
         } else {
             this.food -= 1
@@ -19,7 +19,7 @@ class Traveler {
 
 class Wagon {
     constructor(capacity) {
-        this.capacity = 4
+        this.capacity = capacity
         this.passengers = []
     }
     getAvailableSeatCount() {
@@ -27,13 +27,13 @@ class Wagon {
 
     }
     join(traveler) {
-        if (this.passengers.length < this.capacity) {
+        if (this.passengers.length <= this.capacity) {
             this.passengers.push(traveler)
         }
 
     }
     shouldQuarantine() {
-        return this.passengers.some(traveler => traveler.isHealthy === false)
+        return this.passengers.some(traveler => traveler.isHealthy === true)
 
     }
 
