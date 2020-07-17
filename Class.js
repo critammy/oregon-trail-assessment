@@ -16,18 +16,6 @@ class Traveler {
     }
 }
 
-class Doctor extends Traveler {
-    constructor(name, food, heal) {
-        super(name, food)
-        this.heal = heal
-    }
-    heal(traveler) {
-        return traveler.isHealthy = true
-    }
-
-
-}
-
 
 class Wagon {
     constructor(capacity) {
