@@ -8,7 +8,7 @@ class Traveler {
         this.food += 2
     }
     eat() {
-        if (this.food < 0) {
+        if (this.food === 0) {
             this.isHealthy = false
         } else {
             this.food -= 1
@@ -33,7 +33,7 @@ class Wagon {
 
     }
     shouldQuarantine() {
-        return this.passengers.some(traveler => traveler.isHealthy === true)
+        return this.passengers.some(traveler => traveler.isHealthy === false)
 
     }
 
