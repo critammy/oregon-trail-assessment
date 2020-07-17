@@ -28,30 +28,6 @@ class Doctor extends Traveler {
 
 }
 
-class Hunter extends Traveler {
-    constructor(name, food, giveFood) {
-        super(name, food)
-        this.giveFood = 2
-    }
-    hunt() {
-        this.food += 5
-    }
-
-    eat() {
-        if (this.food <= 1) {
-            this.Healthy = false
-        } else {
-            this.eat -= 2
-        }
-    }
-    giveFood(traveler, numFoodUnits) {
-        if (numFoodUnits >= this.food) {
-            this.food -= numFoodUnits
-            Traveler.food += numFoodUnits
-        }
-
-    }
-}
 
 class Wagon {
     constructor(capacity) {
