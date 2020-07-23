@@ -27,7 +27,7 @@ class Wagon {
 
     }
     join(traveler) {
-        if (this.passengers.length <= this.capacity) {
+        if (this.passengers.length < this.capacity) {
             this.passengers.push(traveler)
         }
 
